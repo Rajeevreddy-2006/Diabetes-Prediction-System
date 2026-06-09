@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+   <nav class="navbar">
+        <div class="nav-left">
+            <a href="/">Home</a>
+        </div>
+        <div class="nav-center">
+            🩺 Prediction History
+        </div>
+        <div class="nav-right">
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+    <div class="history-container">
+        <h1>Prediction History</h1>
+        <table>
+            <tr>
+                <th>Pregnancies</th>
+                <th>Glucose</th>
+                <th>Blood Pressure</th>
+                <th>Skin Thickness</th>
+                <th>Insulin</th>
+                <th>BMI</th>
+                <th>DPF</th>
+                <th>Age</th>
+                <th>Result</th>
+                <th>Date & Time</th>
+            </tr>
+
+            {% for prediction in predictions %}
+            <tr>
+                <td>{{ prediction[0] }}</td>
+                <td>{{ prediction[1] }}</td>
+                <td>{{ prediction[2] }}</td>
+                <td>{{ prediction[3] }}</td>
+                <td>{{ prediction[4] }}</td>
+                <td>{{ prediction[5] }}</td>
+                <td>{{ prediction[6] }}</td>
+                <td>{{ prediction[7] }}</td>
+                <td>{{ prediction[8] }}</td>
+                <td>{{ prediction[9] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <div class="history-actions">
+            <a href="/clear_history" class="clear-btn"
+            onclick="return confirm('Are you sure you want to delete all prediction history?')">
+                Clear History
+            </a>
+            <a href="/download_history" class="download-btn">
+                Download CSV
+            </a>
+        </div>
+        <a href="/">Back to Home</a>
+    </div>
+
+</body>
+</html>

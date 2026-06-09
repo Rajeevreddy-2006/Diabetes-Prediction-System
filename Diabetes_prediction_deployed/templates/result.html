@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="/">Home</a>
+            <a href="/history">History</a>
+        </div>
+        <div class="nav-center">
+            🩺 Prediction Result
+        </div>
+        <div class="nav-right">
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Result</h1>
+        <div class="result {{ color_class }}">
+            <h2>{{ prediction }}</h2>
+            {% if prediction == "Diabetic" %}
+                <p class="message">
+                    Please consult a healthcare professional.
+                </p>
+            {% else %}
+                <p class="message">
+                    Continue maintaining a healthy lifestyle.
+                </p>
+            {% endif %}
+        </div>
+        <a href="/">🔄Predict Again</a>
+    </div>
+</body>
+</html>
