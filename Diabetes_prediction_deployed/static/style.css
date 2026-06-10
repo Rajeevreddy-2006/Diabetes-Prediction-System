@@ -1,3 +1,7 @@
+/* ===================================
+   GLOBAL STYLES
+=================================== */
+
 body {
     margin: 0;
     padding: 0;
@@ -13,6 +17,10 @@ body {
     align-items: center;
 }
 
+/* ===================================
+   MAIN CONTAINER
+=================================== */
+
 .container {
     width: 500px;
     background: rgba(255,255,255,0.95);
@@ -26,6 +34,10 @@ body {
     animation: fadeIn 0.8s ease-in-out;
 }
 
+/* ===================================
+   HEADINGS
+=================================== */
+
 h1 {
     text-align: center;
     color: #2c3e50;
@@ -33,6 +45,23 @@ h1 {
     margin-bottom: 15px;
     font-size: 26px;
 }
+
+.welcome {
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* ===================================
+   FORM INPUTS
+=================================== */
 
 input {
     width: 100%;
@@ -51,6 +80,10 @@ input:focus {
     box-shadow:
         0 0 10px rgba(108,92,231,0.3);
 }
+
+/* ===================================
+   BUTTONS
+=================================== */
 
 button {
     width: 100%;
@@ -76,13 +109,38 @@ button:hover {
         0 8px 15px rgba(72,52,212,0.3);
 }
 
-.result {
-    text-align: center;
-    font-size: 32px;
+.clear-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
     font-weight: bold;
-    margin: 20px 0;
-    color: #e74c3c;
 }
+
+.clear-btn:hover {
+    background:#c0392b;
+    transform:translateY(-2px);
+}
+
+.download-btn {
+    display:inline-block;
+    padding:12px 20px;
+    background:#27ae60;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+.download-btn:hover {
+    background:#219150;
+}
+
+/* ===================================
+   LINKS
+=================================== */
 
 a {
     display: block;
@@ -97,15 +155,35 @@ a:hover {
     color: #4834d4;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.register-link {
+    display:inline !important;
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+.register-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+
+/* ===================================
+   RESULT SECTION
+=================================== */
+
+.result {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #e74c3c;
 }
 
 .diabetic {
@@ -116,13 +194,42 @@ a:hover {
     color: #28a745;
 }
 
-.welcome {
-    text-align: center;
-    font-weight: bold;
-    color: #2c3e50;
+.message {
+    font-size:18px;
+    color:#555;
+    margin:15px 0 25px;
+    line-height:1.6;
 }
 
-table{
+/* ===================================
+   FLASH MESSAGES
+=================================== */
+
+.flash {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.flash.error {
+    background: #ffe5e5;
+    color: #d63031;
+    border: 1px solid #ff7675;
+}
+
+.flash.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #27ae60;
+}
+
+/* ===================================
+   TABLES
+=================================== */
+
+table {
     width: 100%;
     border-collapse: collapse;
     background: white;
@@ -130,7 +237,7 @@ table{
     overflow: hidden;
 }
 
-th{
+th {
     background: linear-gradient(
         135deg,
         #6a5af9,
@@ -141,24 +248,43 @@ th{
     font-size: 15px;
 }
 
-td{
+td {
     padding: 12px;
     text-align: center;
     border-bottom: 1px solid #eee;
 }
 
-tr:hover{
+tr:hover {
     background: #f8f9ff;
 }
 
-.history-actions{
+/* ===================================
+   HISTORY PAGE
+=================================== */
+
+.history-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 100px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow-x: auto;
+}
+
+.history-actions {
     margin-top: 25px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.navbar{
+/* ===================================
+   NAVBAR
+=================================== */
+
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -177,12 +303,12 @@ tr:hover{
 }
 
 .nav-left,
-.nav-right{
+.nav-right {
     display: flex;
     gap: 30px;
 }
 
-.navbar a{
+.navbar a {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -191,7 +317,7 @@ tr:hover{
     margin-bottom: 3px;
 }
 
-.nav-center{
+.nav-center {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -201,110 +327,161 @@ tr:hover{
     font-weight: 700;
 }
 
-@media(max-width:768px){
+/* ===================================
+   ANIMATIONS
+=================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+@media (max-width: 768px){
+    /* Containers */
+    .container{
+        width:95%;
+        margin-top:100px;
+        padding:15px;
+    }
+    .history-container{
+        width:95%;
+        margin-top:90px;
+        padding:15px;
+    }
+    /* Navbar */
     .navbar{
-        gap: 20px;
-        flex-wrap: wrap;
-        padding: 15px;
+        padding:12px 15px;
     }
     .navbar a{
-        font-size: 16px;
+        font-size:14px;
+    }
+    .nav-left,
+    .nav-right{
+        gap:12px;
+    }
+    .nav-center{
+        font-size:16px;
+        white-space:nowrap;
+    }
+    /* Forms */
+    input{
+        padding:12px;
+        font-size:16px;
+    }
+    button{
+        font-size:16px;
+        padding:12px;
+    }
+    /* Headings */
+    h1{
+        font-size:24px;
+    }
+    .result{
+        font-size:24px;
+    }
+    /* History Table */
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+    th{
+        font-size:13px;
+        padding:10px;
+    }
+    td{
+        font-size:13px;
+        padding:10px;
+    }
+    /* Buttons */
+    .history-actions{
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+    .download-btn,
+    .clear-btn{
+        width:220px;
+        text-align:center;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 500px){
+    .navbar{
+        padding:10px;
+    }
+    .navbar a{
+        font-size:13px;
+    }
+    .nav-center{
+        font-size:14px;
+    }
+    .nav-left,
+    .nav-right{
+        gap:8px;
+    }
+    h1{
+        font-size:22px;
     }
     .container{
-        width: 90%;
-        margin-top: 110px;
+        width:98%;
+        padding:12px;
+    }
+    .history-container{
+        width:98%;
+        padding:12px;
+    }
+    th,
+    td{
+        font-size:12px;
+        padding:8px;
     }
 }
 
-.welcome {
-    text-align: center;
-    font-size: 18px;
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-
-.flash{
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.flash.error{
-    background: #ffe5e5;
-    color: #d63031;
-    border: 1px solid #ff7675;
-}
-
-.flash.success{
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #27ae60;
-}
-
-.clear-btn{
-    background: #e74c3c;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.clear-btn:hover{
-    background:#c0392b;
-    transform:translateY(-2px);
-}
-
-.history-container{
-    width: 95%;
-    max-width: 1400px;
-    margin: 100px auto;
-    background: rgba(255,255,255,0.95);
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    overflow-x: auto;
-}
-
-.register-text{
-    margin-top: 20px;
-    text-align: center;
-    font-size: 16px;
-    color: #666;
-}
-
-.register-link{
-    display:inline !important;
-    color: #27ae60;
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 5px;
-}
-
-.register-link:hover{
-    text-decoration: underline;
-}
-
-.download-btn{
-    display:inline-block;
-    padding:12px 20px;
-    background:#27ae60;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
-    margin-right:10px;
-}
-
-.download-btn:hover{
-    background:#219150;
-}
-
-.message{
-    font-size:18px;
-    color:#555;
-    margin:15px 0 25px;
-    line-height:1.6;
+@media(max-width:768px){
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+        padding:10px;
+    }
+    .nav-center{
+        position:static;
+        transform:none;
+        order:1;
+        margin-bottom:10px;
+        font-size:18px;
+        text-align:center;
+    }
+    .nav-left{
+        order:2;
+        display:flex;
+        gap:25px;
+    }
+    .nav-right{
+        order:3;
+        display:flex;
+        justify-content:center;
+        width:100%;
+        margin-top:5px;
+    }
+    .navbar a{
+        font-size:15px;
+        margin:0;
+    }
+    .container{
+        margin-top:120px;
+    }
+    .history-container{
+        margin-top:120px;
+    }
 }
