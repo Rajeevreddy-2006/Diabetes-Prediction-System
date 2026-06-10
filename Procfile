@@ -1,0 +1,1 @@
+web: python Diabetes_prediction_deployed/app.py
