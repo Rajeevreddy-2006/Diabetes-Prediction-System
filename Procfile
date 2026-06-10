@@ -1,1 +1,1 @@
-web: python app.py
+web: python Diabetes_prediction_deployed/app.py
