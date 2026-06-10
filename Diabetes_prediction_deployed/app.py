@@ -13,6 +13,8 @@ app.secret_key = os.environ.get(
     "SECRET_KEY",
     "diabetes_prediction_secret"
 )
+if not os.path.exists("database.db"):
+    import init_db
 
 # Load model and scaler
 model = pickle.load(open('diabetes_model.pkl', 'rb'))
