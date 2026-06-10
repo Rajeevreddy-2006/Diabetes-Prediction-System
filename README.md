@@ -177,7 +177,8 @@ Diabetes_Prediction/
 ### Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Rajeevreddy-2006/Diabetes-Prediction-System.git
+cd Diabetes-Prediction-System
 ```
 
 ### Create Virtual Environment
@@ -242,7 +243,7 @@ http://127.0.0.1:5000
 
 ![History Page](Diabetes_prediction_deployed/resource/History_Page.png)
 
-## Current Limitations
+## ⚠️ Current Limitations
 
 - The application currently uses SQLite for data storage.
 - The `database.db` file is not tracked in Git and is excluded through `.gitignore`.
