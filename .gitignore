@@ -16,9 +16,6 @@ __pycache__/
 # Database
 *.db
 
-# Model Files
-*.pkl
-
 # Environment Variables
 .env
 
