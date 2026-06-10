@@ -242,6 +242,13 @@ http://127.0.0.1:5000
 
 ![History Page](Diabetes_prediction_deployed/resource/History_Page.png)
 
+## Current Limitations
+
+- The application currently uses SQLite for data storage.
+- The `database.db` file is not tracked in Git and is excluded through `.gitignore`.
+- During redeployment, a new database may be created, causing registered users and prediction history to be reset.
+- The application is intended for demonstration and learning purposes at its current stage.
+
 ## 🔮 Future Improvements
 
 * Prediction Confidence Score
