@@ -1,3 +1,4 @@
+import os
 import pickle
 import numpy as np
 import sqlite3
@@ -8,7 +9,10 @@ from flask import (Flask,render_template,request,session,redirect,url_for,flash)
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
-app.secret_key = "diabetes_prediction_secret"
+app.secret_key = os.environ.get(
+    "SECRET_KEY",
+    "diabetes_prediction_secret"
+)
 
 # Load model and scaler
 model = pickle.load(open('diabetes_model.pkl', 'rb'))
