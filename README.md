@@ -1,4 +1,4 @@
-# 🩺 Diabetes Prediction System
+# Diabetes Prediction System
 
 <div align="center">
 
@@ -14,7 +14,7 @@ Predict whether a patient is diabetic or non-diabetic using machine learning and
 </div>
 
 
-## 🧠 About the Project
+## About the Project
 
 Diabetes is one of the most common chronic diseases worldwide, and early detection can significantly improve patient health outcomes. This project is an end-to-end Machine Learning web application that predicts whether a person is likely to have diabetes based on key medical attributes.
 
@@ -34,7 +34,7 @@ The system combines a trained Random Forest machine learning model with a Flask-
 * Responsive and user-friendly interface
 
 
-## 📊 Dataset
+## Dataset
 
 | Property | Details |
 |----------|----------|
@@ -45,7 +45,7 @@ The system combines a trained Random Forest machine learning model with a Flask-
 | **Target** | Binary — 1 (Diabetic) / 0 (Non-Diabetic) |
 | **Class Balance** | ~65% Non-Diabetic · ~35% Diabetic |
 
-## 🔬 Features Used
+## Features Used
 
 | Feature | Description |
 |----------|----------|
@@ -58,7 +58,7 @@ The system combines a trained Random Forest machine learning model with a Flask-
 | `DiabetesPedigreeFunction` | Likelihood of diabetes based on family history |
 | `Age` | Age in years |
 
-## 🤖 Model & Performance
+## Model & Performance
 
 Multiple machine learning classifiers were trained and evaluated. The best-performing model was selected for deployment.
 
@@ -94,7 +94,7 @@ Classification Report:
 weighted avg       0.99      0.99      0.99       400
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Diabetes_Prediction/
@@ -150,7 +150,7 @@ Diabetes_Prediction/
 └── .gitignore
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Machine Learning
 
@@ -172,7 +172,7 @@ Diabetes_Prediction/
 * CSS
 
 
-## ⚙️ Installation
+## Installation
 
 ### Clone Repository
 
@@ -220,7 +220,7 @@ http://127.0.0.1:5000
 ```
 
 
-## 📸 Screenshots
+## Screenshots
 
 ### Login Page
 
@@ -243,14 +243,14 @@ http://127.0.0.1:5000
 
 ![History Page](Diabetes_prediction_deployed/resource/History_Page.png)
 
-## ⚠️ Current Limitations
+## Current Limitations
 
 - The application currently uses SQLite for data storage.
 - The `database.db` file is not tracked in Git and is excluded through `.gitignore`.
 - During redeployment, a new database may be created, causing registered users and prediction history to be reset.
 - The application is intended for demonstration and learning purposes at its current stage.
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * Prediction Confidence Score
 * Interactive Dashboard
@@ -258,7 +258,7 @@ http://127.0.0.1:5000
 * Cloud Deployment
 * Advanced Data Visualization
 
-## 📚 References
+## References
 
 - [Pima Indians Diabetes Dataset — Kaggle](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
 
