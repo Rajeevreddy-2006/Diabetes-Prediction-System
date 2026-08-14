@@ -1,12 +1,5 @@
 # Diabetes Prediction System
 
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge\&logo=python)
-![Flask](https://img.shields.io/badge/Flask-Web%20Application-black?style=for-the-badge\&logo=flask)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange?style=for-the-badge\&logo=scikit-learn)
-![SQLite](https://img.shields.io/badge/SQLite-Database-blue?style=for-the-badge\&logo=sqlite)
-
 ### End-to-End Machine Learning Web Application for Diabetes Prediction
 
 Predict whether a patient is diabetic or non-diabetic using machine learning and track prediction history through a secure web application.
